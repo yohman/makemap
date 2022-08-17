@@ -74,6 +74,7 @@ Hint: There are *two* places you will need to change.
 
 Some challenge exercises:
 
+- Add a title and description (use HTML tags `<h1>`, `<p>`)
 - Change the text in the popup window
 - Add multiple markers to the map
 - Add a circle to the map (example below, radius is in pixels)
@@ -89,3 +90,4 @@ L.circleMarker([latitude,longitude],{radius:100}).addTo(map)
 - How is an "interactive" map *different*?
 - Discuss additional features you would like to add to your map
 - Elaborate on how this type of data visualization (i.e. map-based) can be used in your field of interest
+
