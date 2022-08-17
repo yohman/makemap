@@ -1,4 +1,4 @@
-# Let's make a map
+# Let's make an interactive map
 
 ## Step 1
 
@@ -59,3 +59,23 @@ Search or navigate to any location.
 Right click, and select the coordinates (it will automatically be copied to your clipboard)
 
 ![coords](https://user-images.githubusercontent.com/825990/185029320-c394fea6-28d1-4b15-bfa8-ec7f179e1aaf.png)
+
+## Step 6
+
+Replace the latitude and longitude coordinates in the code with the numbers you just copied from Google Maps.
+
+Hint: There are *two* places you will need to change.
+
+## Step 7
+
+Some challenge exercises:
+
+- Change the text in the popup window
+- Add multiple markers to the map
+- Add a circle to the map (example below, radius is in pixels)
+
+```
+// add a circle 
+L.circleMarker([latitude,longitude],{radius:100}).addTo(map)
+```
+
