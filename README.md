@@ -79,3 +79,9 @@ Some challenge exercises:
 L.circleMarker([latitude,longitude],{radius:100}).addTo(map)
 ```
 
+## Discussion
+
+- Explain what you have just created, and why it may or may not be useful
+- How is an "interactive" map *different*?
+- Discuss additional features you would like to add to your map
+- Elaborate on how this type of data visualization (i.e. map-based) can be used in your field of interest
