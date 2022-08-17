@@ -74,7 +74,7 @@ Hint: There are *two* places you will need to change.
 
 Some challenge exercises:
 
-- Add a title and description (use HTML tags `<h1>`, `<p>`)
+- Add a title and description (use HTML tags `<h1></h1>`, `<p></p>`)
 - Change the text in the popup window
 - Add multiple markers to the map
 - Add a circle to the map (example below, radius is in pixels)
