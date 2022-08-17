@@ -6,6 +6,10 @@ Open a text editor. Any editor will do.
 
 - Mac: TextEdit
 - PC: Notepad
+- Or use downloaded text/code editors
+   - [VSCode](https://code.visualstudio.com/download)
+   - [Sublime Text](https://www.sublimetext.com/)
+   - [Notepad++ (PC only)](https://notepad-plus-plus.org/downloads/)
 
 ## Step 2
 
