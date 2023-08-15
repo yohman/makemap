@@ -19,13 +19,13 @@ VSCodeを開きます。VSCode をお持ちでない場合は、ここからダ�
 1. 以下に示すように、「新規ファイル」ボタンをクリックします。
 
 
-<img src="images/vscode start.png" width=400>
+<img src="images/vscode start.png" width=600>
 
 4. ファイル名を「map.html」にします。
 
 VSCode は次のようになります。
 
-<img src="images/map file.png" width=400>
+<img src="images/map file.png" width=600>
 
 ## Step 3
 
