@@ -71,9 +71,9 @@ VSCode は次のようになります。
 
 マップをカスタマイズしよう。まずは地球上の好みの場所の緯度と経度を調べます。
 
-Googleマップにアクセス: https://www.google.com/maps
+Googleマップにアクセス: [https://www.google.com/maps](https://www.google.com/maps)
 
-任意の場所を検索またはそこに移動。
+場所を検索またはそこに移動。
 
 地図で見つけた場所を右クリックして座標を選択（自動的にクリップボードにコピーされます）。
 
@@ -96,7 +96,7 @@ Googleマップにアクセス: https://www.google.com/maps
 
 ```
 // add a circle 
-L.circleMarker([latitude,longitude],{radius:100}).addTo(map)
+L.circleMarker(latlon,{radius:100}).addTo(map)
 ```
 
 ## Step 9
