@@ -1,56 +1,69 @@
-# Let's make an interactive map
+# Let's make an web map
 
 ## Step 1
 
-Open a text editor. Any editor will do.
-
-- Mac: TextEdit
-- PC: Notepad
-- Or use downloaded text/code editors
-   - [VSCode](https://code.visualstudio.com/download)
-   - [Sublime Text](https://www.sublimetext.com/)
-   - [Notepad++ (PC only)](https://notepad-plus-plus.org/downloads/)
+Create a "map" folder on your desktop, or desired location on your computer. This is where you will save files for this workshop.
 
 ## Step 2
 
-If using TextEdit (Mac), make sure you are in plain text mode.
+Open VSCode.
 
-<img width="430" alt="makeplain" src="https://user-images.githubusercontent.com/825990/185028370-06850ed7-e680-43b4-8061-60c06d74db15.png">
+If you do not have VSCode, you can download it here:
+
+   - [VSCode](https://code.visualstudio.com/download)
 
 ## Step 3
 
-Copy and paste the following code into your text editor:
+1. Click "Open Folder"
+1. Navigate to your "map" folder you created in Step 1
+1. Click on the "new file" button as shown below:
+
+<img src="images/vscode start.png" width=400>
+
+4. Name the file "map.html"
+
+Your VSCode should now look like this:
+
+<img src="images/map file.png" width=400>
+
+## Step 3
+
+Copy and paste the following code::
 
 ```html
 <!-- leaflet css -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <!-- leaflet javascript -->
-<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
 <!-- the map container -->
-<div id="map" style="width: 800px; height: 600px;"></div>
+<div id="map" style="width: 100%; height: 600px;"></div>
 
 <!-- the javascript to make the map -->
 <script>
+	// location
+	var latlon = [35.6585, 139.7454]
+
 	// create the map
-	var map = L.map('map').setView([35.7426941,139.9062533], 16);
+	var map = L.map('map').setView(latlon, 18);
 
 	// add a basemap
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg', {
+		attribution: '国土地理院'
 	}).addTo(map);
 
 	// add a marker with a popup window
-	L.marker([35.7426941,139.9062533]).addTo(map)
-		.bindPopup("Don't fall asleep! Mapping is fun!")
+	L.marker(latlon).addTo(map)
+		.bindPopup("Tokyo Tower")
 		.openPopup();
 </script>
+
 ```
 
 ## Step 4
 
-Save the file as `map.html` on your desktop (or preferred location on your computer). Find the file and double click it.
+Save the file. Find the file `map.html` on your desktop (or the location you chose to use) and double click it.
 
 ## Step 5
 
@@ -67,8 +80,6 @@ Right click, and select the coordinates (it will automatically be copied to your
 ## Step 6
 
 Replace the latitude and longitude coordinates in the code with the numbers you just copied from Google Maps.
-
-Hint: There are *two* places you will need to change.
 
 ## Step 7
 
