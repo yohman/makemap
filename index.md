@@ -1,6 +1,6 @@
 # Webマップを作ってみよう！
 
-<img src="images/banner.png">
+<kbd><img src="images/banner.png"></kbd>
 
 ## Step 1
 
@@ -19,15 +19,15 @@ VSCodeを開きます。VSCode をお持ちでない場合は、ここからダ�
 1. 以下に示すように、「新規ファイル」ボタンをクリックします。
 
 
-<img src="images/vscode start.png" width=600>
+<kbd><img src="images/vscode start.png" width=600></kbd>
 
 4. ファイル名を「map.html」にします。
 
 VSCode は次のようになります。
 
-<img src="images/map file.png" width=600>
+<kbd><img src="images/map file.png" width=600></kbd>
 
-## Step 3
+## Step 4
 
 次のコードをコピーして貼り付けます。
 
@@ -63,27 +63,29 @@ VSCode は次のようになります。
 
 ```
 
-## Step 4
+## Step 5
 
 ファイルを保存します。 デスクトップ (または使用することを選択した場所) で「map.html」ファイルを見つけてダブルクリックします。ブラウザーでマップが現れるはず！
 
-## Step 5
+## Step 6
 
 マップをカスタマイズしよう。まずは地球上の好みの場所の緯度と経度を調べます。
 
 Googleマップにアクセス: https://www.google.com/maps
 
-任意の場所を検索または移動。
+任意の場所を検索またはそこに移動。
 
-右クリックして座標を選択（自動的にクリップボードにコピーされます）。
+地図で見つけた場所を右クリックして座標を選択（自動的にクリップボードにコピーされます）。
 
-![coords](https://user-images.githubusercontent.com/825990/185029320-c394fea6-28d1-4b15-bfa8-ec7f179e1aaf.png)
+<kbd><img src="images/reitaku coords.png" width=600></kbd>
 
-## Step 6
+## Step 7
 
 コード内の緯度と経度の座標を、Google マップからコピーした数値に置き換えて、ファイルをセーブして、もう一度ブラウザーに戻り、リフレッシュ！
 
-## Step 7
+<img src="images/code coords.png" width=400>
+
+## Step 8
 
 いくつかのチャレンジ演習:
 
@@ -97,7 +99,7 @@ Googleマップにアクセス: https://www.google.com/maps
 L.circleMarker([latitude,longitude],{radius:100}).addTo(map)
 ```
 
-## Step 8
+## Step 9
 
 地図のスクリーンショットを撮り、この Google スライドに投稿しよう！
 
