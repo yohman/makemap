@@ -97,6 +97,12 @@ Googleマップにアクセス: https://www.google.com/maps
 L.circleMarker([latitude,longitude],{radius:100}).addTo(map)
 ```
 
+## Step 8
+
+地図のスクリーンショットを撮り、この Google スライドに投稿しよう！
+
+https://docs.google.com/presentation/d/1rTvHOYbw_6Ghe2DUFVIWSTxmtYxGbS0_tU8WJZCJ2y4/edit?usp=sharing
+
 ## Discussion
 
 - 今作成したものがどのように役立つかどうかの理由を説明してください
