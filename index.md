@@ -2,6 +2,8 @@
 
 <kbd><img src="images/banner.png"></kbd>
 
+[Intro to Mapping Workshop](https://docs.google.com/presentation/d/16YADgSqYe1pGUYNRoaKFPs8R3k0JVYjPrpHeMqE0RAE/edit?usp=sharing)
+
 ## Step 1
 
 デスクトップまたはコンピュータ上の任意の場所に「map」フォルダを作成します。 ここに、このワークショップ用のファイルを保存します。
