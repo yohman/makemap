@@ -41,23 +41,23 @@ VSCode は次のようになります。
 <!-- leaflet javascript -->
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
-<!-- the map container -->
+<!-- マップはここで表示 -->
 <div id="map" style="width: 100%; height: 600px;"></div>
 
-<!-- the javascript to make the map -->
+<!-- マップを作るjavascript -->
 <script>
-	// location
+	// 地図の中心になる緯度経度
 	var latlon = [35.6585, 139.7454]
 
-	// create the map
+	// マップを作成
 	var map = L.map('map').setView(latlon, 18);
 
-	// add a basemap
+	// ベースマップ（衛生写真）を追加
 	L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg', {
 		attribution: '国土地理院'
 	}).addTo(map);
 
-	// add a marker with a popup window
+	// マーカーを追加
 	L.marker(latlon).addTo(map)
 		.bindPopup("Tokyo Tower")
 		.openPopup();
