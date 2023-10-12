@@ -95,6 +95,11 @@ Some challenge exercises:
 L.circleMarker([latitude,longitude],{radius:100}).addTo(map)
 ```
 
+Guides:
+
+- https://python-visualization.github.io/folium/latest/getting_started.html
+- https://qiita.com/Kumanuron-1910/items/12ce7aa02922927de2f4
+  
 ## Discussion
 
 - Explain what you have just created, and why it may or may not be useful
