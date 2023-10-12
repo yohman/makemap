@@ -1,4 +1,4 @@
-# Let's make an web map
+# Let's make a web map
 
 ## Step 1
 
