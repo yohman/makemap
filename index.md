@@ -105,7 +105,7 @@ L.circleMarker(latlon,{radius:100}).addTo(map)
 
 地図のスクリーンショットを撮り、この Google スライドに投稿しよう！
 
-https://docs.google.com/presentation/d/1rTvHOYbw_6Ghe2DUFVIWSTxmtYxGbS0_tU8WJZCJ2y4/edit?usp=sharing
+[Google Slides](https://docs.google.com/presentation/d/1rTvHOYbw_6Ghe2DUFVIWSTxmtYxGbS0_tU8WJZCJ2y4/edit?usp=sharing)
 
 ## Discussion
 
