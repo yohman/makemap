@@ -2,7 +2,7 @@
 
 <kbd><img src="images/banner.png"></kbd>
 
-[Intro to Mapping Workshop](https://docs.google.com/presentation/d/16YADgSqYe1pGUYNRoaKFPs8R3k0JVYjPrpHeMqE0RAE/edit?usp=sharing)
+[Intro to Mapping Workshop](https://docs.google.com/presentation/d/1vaPlgmhVfbVCEJ8cePac41SkdhDw1ajmvGmDPMUVWwY/edit#slide=id.g26d7eabae8b_0_0)
 
 ## Step 1
 
