@@ -1,4 +1,4 @@
-# Webマップを作ってみよう！
+# Part 1: Webマップを作ってみよう！
 
 <kbd><img src="images/banner.png"></kbd>
 
@@ -113,3 +113,13 @@ L.circleMarker(latlon,{radius:100}).addTo(map)
 - 「インタラクティブ」マップは普通の地図とどのような【違い】があるのでしょうか?
 - マップに追加したい機能について話し合う
 - このタイプのデータ視覚化 (つまり、マップベース) を興味のある分野でどのように使用できるかを詳しく語り合おう。
+
+# Part 2: 災害マップチャレンジ
+
+The data:
+
+[Historical data (csv)](<data/Historical Disasters.csv>)
+
+- Go to https://keperl.gl
+- Upload csv file
+- Map it!
