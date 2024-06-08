@@ -118,8 +118,10 @@ L.circleMarker(latlon,{radius:100}).addTo(map)
 
 The data:
 
-[Historical data (csv)](<data/Historical Disasters.csv>)
+Download: [Historical data (csv)](<data/Historical Disasters.csv>)
 
-- Go to https://keperl.gl
+- Go to [https://keperl.gl](https://keperl.gl)
 - Upload csv file
-- Map it!
+- Recreate this map:
+
+![alt text](<images/earthquake map.jpg>)
