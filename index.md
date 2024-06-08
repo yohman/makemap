@@ -114,7 +114,11 @@ L.circleMarker(latlon,{radius:100}).addTo(map)
 - マップに追加したい機能について話し合う
 - このタイプのデータ視覚化 (つまり、マップベース) を興味のある分野でどのように使用できるかを詳しく語り合おう。
 
-# Part 2: 災害マップチャレンジ
+# Part 2: Humanitarian Mapathon
+
+[Mapathon Tutorial](<data/2024 Mapathon Quick Guide - Japanese.pdf>)
+
+# Part 3: 災害マップチャレンジ
 
 The data:
 
