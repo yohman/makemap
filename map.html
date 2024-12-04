@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Map Example</title>
+    <!-- LeafletのCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- 地図を表示するためのコンテナ -->
+    <div id="map" style="width: 100%; height: 600px;"></div>
+
+    <!-- LeafletのJavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- 地図の初期化スクリプト -->
+    <script>
+        // 地図の中心となる緯度と経度
+        var latlon = [35.6585, 139.7454];
+
+        // 地図を作成
+        var map = L.map('map').setView(latlon, 18);
+
+        // ベースマップ（航空写真）を追加
+        L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg', {
+            attribution: '国土地理院'
+        }).addTo(map);
+
+        // マーカーを追加
+        L.marker(latlon).addTo(map)
+            .bindPopup("東京タワー")
+            .openPopup();
+    </script>
+</body>
+</html>
