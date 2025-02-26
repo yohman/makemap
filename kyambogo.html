@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Basic meta tags for proper rendering and character encoding -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MapLibre Map Example</title>
+	
+	<!-- MapLibre CSS - Required for map controls and markers -->
+	<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+	<style>
+		/* Reset default browser margins and ensure full-height layout */
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		/* Make map container fill the entire viewport */
+		#map {
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- Container div where the map will be rendered -->
+	<div id="map"></div>
+
+	<!-- MapLibre GL JS library -->
+	<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+
+	<script>
+		// Define the coordinates for Kyambogo University (longitude, latitude)
+		var latlon = [32.63204,0.34712];
+
+		// Initialize the map with custom style configuration
+		var map = new maplibregl.Map({
+			container: 'map',  // ID of the container div
+			style: {
+				version: 8,  // MapLibre style specification version
+				sources: {
+					// Configure the ESRI World Imagery basemap source
+					'esri-world-imagery': {
+						type: 'raster',  // Raster tile source type
+						tiles: [
+							// ESRI aerial imagery tile service URL
+							'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+						],
+						tileSize: 256,  // Standard tile size
+						attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+					}
+				},
+				layers: [{
+					// Define how the basemap should be rendered
+					id: 'esri-world-imagery-layer',
+					type: 'raster',
+					source: 'esri-world-imagery',
+					minzoom: 0,    // Minimum zoom level
+					maxzoom: 22    // Maximum zoom level
+				}]
+			},
+			center: [32.6066, 0.3312],    // Center point between Kyambogo and Kampala
+			zoom: 12                       // Zoom level to show both locations
+		});
+
+		// Add a marker at Kyambogo University location
+		new maplibregl.Marker()
+			.setLngLat(latlon)
+			.setPopup(new maplibregl.Popup().setHTML("Kyambogo University")) // Add clickable popup
+			.addTo(map);
+		
+		// Add another marker at the center of Kampala
+		new maplibregl.Marker()
+			.setLngLat([32.5811, 0.3136])  // Changed order to [longitude, latitude]
+			.setPopup(new maplibregl.Popup().setHTML("Kampala City")) // Add clickable popup
+			.addTo(map);
+			
+        // Function to add a circle with given radius in meters
+        function addCircle(map, center, radiusMeters, color = '#007cbf') {
+            const sourceId = `circle-${center[0]}-${center[1]}`;
+            const layerId = `circle-layer-${center[0]}-${center[1]}`;
+            
+            map.addSource(sourceId, {
+                type: 'geojson',
+                data: {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: center
+                    }
+                }
+            });
+
+            map.addLayer({
+                id: layerId,
+                type: 'circle',
+                source: sourceId,
+                paint: {
+                    'circle-radius': {
+                        stops: [
+                            [0, 0],
+                            [20, radiusMeters]  // radius at zoom level 20
+                        ],
+                        base: 2
+                    },
+                    'circle-color': color,
+                    'circle-stroke-width': 2,
+                    'circle-stroke-color': '#ffffff',
+                    'circle-opacity': 0.2
+                }
+            });
+        }
+
+        // Add circles when map loads
+        map.on('load', function () {
+            // 1km radius around Kyambogo University
+            addCircle(map, latlon, 1000, '#007cbf');
+            
+            // 10km radius around Kampala
+            addCircle(map, [32.5811, 0.3136], 50000, '#bf0000');
+        });
+
+		// Add zoom and rotation controls to the map
+		map.addControl(new maplibregl.NavigationControl());
+
+		// Add geolocation control to the map
+		map.addControl(new maplibregl.GeolocateControl({
+			positionOptions: {
+				enableHighAccuracy: true
+			},
+			trackUserLocation: true
+		}));
+
+	</script>
+</body>
+</html>
